@@ -394,4 +394,58 @@ footer .linefooter p a{
     text-decoration: none;
     color: #ffffff;
     font-weight: 600;
+
+}
+
+@media  screen and (max-width: 720px){
+
+    .navegacao{
+        padding: 0 20px;
+    }
+
+
+    .interface, .inicio{
+        flex-direction: column;
+        text-align: center;
+        align-items: center; /* centraliza itens no eixo transversal */
+        justify-content: center; /* centraliza no eixo principal */
+    }
+
+    /* força os blocos internos a ficarem centralizados */
+    .inicio .flex{
+        align-items: center;
+        text-align: center;
+    }
+
+    /* garante que o botão fique centralizado (se estiver dentro de um container flex ou form) */
+    .btn-contato,                   
+    form .btn-contato{
+        margin: 0 auto;
+        align-self: center;
+    }
+
+    .inicio .flex, .inicio .image-container{
+        order: initial;
+        flex: initial;
+        max-width: 100%;
+        justify-content: center;
+    }
+
+    .inicio .image-container{
+        margin-top: 30px;
+    }
+
+    section.habilidades .flex{
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    section.Sobre .flex{
+        flex-direction: column;
+    }
+
+    section.Projetos .flex{
+        flex-direction: column;
+    }
+    
 }
