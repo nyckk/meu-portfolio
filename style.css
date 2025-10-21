@@ -1,0 +1,397 @@
+*{
+    font-family: poppins, sans-serif; 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #000;
+    height: 100vh;
+    color: #fff;
+}
+
+.flex{
+    display: flex;
+    
+}
+
+.btn-contato{
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #00008A;
+    border: none;
+    padding: 10px 40px;
+    border-radius:  15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+h2.titulo{
+    color: #ffffff;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+h2.titulo span{
+    color: #2a2af0;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+button:hover{
+    box-shadow: 0px 0px 10px #2a2af0;
+    transform: scale(1.05);
+}
+
+/* Estilização da navegação */
+.navegacao{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+header{
+    padding: 40px 4%;
+}
+
+header > .navegacao{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header a{
+    text-decoration: none;
+    color: #555555;
+    display: inline-block;
+    transition: 0,5ms
+}
+header a:hover{
+    color: #ffffff;
+    transform: scale(1.05);
+}
+
+header nav ul{
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+header nav ul li{
+    display: inline-block;
+    padding: 0 40px;
+}
+
+
+
+
+
+.interface {
+    max-width: 1280px;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 1rem;
+    
+
+}
+
+.inicio {
+    max-width: 1280px;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 1rem;
+}
+
+.inicio h1 {
+    font-size: 2.5rem;
+    color: #ffffff;
+}
+.inicio p {
+    font-size: 1.2rem;
+    color: #cccccc;
+    line-height: 1.6;
+}
+.interface {
+    width: 100%;
+    max-width: 1100px;
+    display: flex;
+    flex-direction: row; /* texto à esquerda, imagem à direita */
+    align-items: center;
+    justify-content: space-between;
+    gap: rem;
+    text-align: leFt;
+}
+
+.inicio .flex {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* textos alinhados à esquerda */
+    gap: 1rem;
+    flex: 1; /* ocupa espaço disponível */
+    order: 1;
+}
+
+.inicio .image-container {
+    width: 100%;
+    max-width: 360px;
+    display: flex;
+    justify-content: flex-end; /* imagem à direita */
+    flex: 0 0 360px; /* reserva espaço para a imagem */
+    order: 2;
+    
+}
+
+.inicio img.person {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    border-radius: 1000px;
+    box-shadow: #2a2af0 0px 0px 50px;
+    
+}
+.inicio img.person {
+    position: relative;
+    animation: flutuar 2s infinite alternate;
+}
+@keyframes flutuar{
+    0%{
+        top: 0;
+    }
+    100%{
+        top: 30px;
+    }
+}
+
+/* Seção de Habilidades */
+section.habilidades{
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 40px 4%;
+    
+}
+
+section.habilidades .flex{
+    gap: 60px;
+    justify-content: center;
+}
+
+.habilidades .habilidades-box{
+   color: #ffffff;
+   padding: 40px;
+   background-color: #0101663d;
+   
+   margin-top: 45px;
+   border-radius: 15px;
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.habilidades .habilidades-box:hover{
+    transform: scale(1.05);
+    box-shadow: 0px 0px 20px #2a2af0;
+}
+
+.habilidades .habilidades-box i{
+    font-size: 60px;
+    color: #2a2af0;
+    margin-bottom: 20px;
+}
+
+.habilidades .habilidades-box h3{
+    font-size: 28px;
+    margin: 15px 0;
+}
+/* Estilização da seção Sobre Mim */
+section.Sobre{
+    padding: 40px 4%;~
+
+    
+}
+section.Sobre .flex{
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    
+}
+.sobre .txt-sobre{
+    color: #ffffff;
+}
+section.Sobre h2 {
+    font-size: 40px;
+    line-height: 60px;
+    margin-bottom: 30px;
+}
+section.Sobre h2 span {
+    color: #2a2af0;
+    display: block;
+}
+
+section.Sobre p {
+    margin: 20px 0;
+    text-align: justify;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-top: 20px;
+    color: #cccccc;
+    
+}
+
+section.Sobre .img-sobre img {
+    border-radius: 50px;
+    
+}
+
+.btn-social button{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    background-color: #2a2af0;
+    font-size: 22px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: 0.2s;
+}
+
+section.Projetos{
+    justify-content: center;
+    padding: 40px 4%;
+    box-shadow: 0px 0px 20px #2a2af03d;
+}
+
+section.Projetos .flex{
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+    
+}
+
+
+.img-port{
+   
+    width: 360px;
+    height: 460px;
+    background-size: cover;
+    background-position: 100% 0%;
+   
+    position: relative;
+    cursor: pointer;
+    border-radius: 40px;
+    
+
+}
+
+.img-port:hover {
+     background-position: 100% 100%;
+      transition: 8s;
+     
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00001ac2;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    opacity: 0;
+    
+}
+.img-port:hover .overlay {
+    opacity: 1;
+     transition: 3s;
+     color: #fff;
+}
+
+section.formulario{
+    padding: 50px 4%;
+   
+    
+}
+
+form{
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+form input, form textarea{
+    color: #fff;
+    width: 100%;
+    background-color: #50505079;
+    padding: 20px 15px;
+    border-radius: 10px;
+    border: none;
+    font-size: 18px;
+}
+
+form textarea{
+    resize: nonE;
+    min-height: 150px;
+}
+
+form .btn-contato{
+    margin-top: 20px;
+    align-self: center;
+    padding: 15px 60px;
+    font-size: 20px;
+    font-weight: 600;
+    width: auto;
+}
+
+form .btn-contato input{
+    width: 120px;
+}
+
+
+/* Estilização do rodapé */
+footer{
+    padding: 40px 4%;
+    margin-top: 60px;
+     box-shadow: 0px 0px 20px #2a2af03d;
+}
+
+footer.flex{
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+
+}
+
+footer .linefooter{
+    padding: 20px 0;
+    margin-top: 20px;
+    padding-top: 20px;
+    text-align: center;
+    color: #110294;
+    
+}
+
+footer .linefooter p i{
+    color: #2a2af0;
+    font-size: 22px;
+}
+
+footer .linefooter p a{
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 600;
+}
