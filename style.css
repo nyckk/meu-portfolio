@@ -22,9 +22,10 @@ body{
     background-color: #00008A;
     border: none;
     padding: 10px 40px;
-    border-radius:  15px;
+    border-radius:  15px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    border-radius: 15px;
 }
 
 h2.titulo{
@@ -68,7 +69,7 @@ header a{
     text-decoration: none;
     color: #555555;
     display: inline-block;
-    transition: 0,5ms
+    transition: 0.5s;
 }
 header a:hover{
     color: #ffffff;
@@ -86,7 +87,27 @@ header nav ul li{
     padding: 0 40px;
 }
 
+/* NOVOS ESTILOS PARA O MENU RESPONSIVO */
 
+.btn-abrir-menu {
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+    display: none; /* Escondido por padrão (desktop) */
+}
+
+.overlay-menu {
+    background-color: #000000a6;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 998;
+    display: none; /* Escondido por padrão */
+}
+
+/* FIM DOS NOVOS ESTILOS */
 
 
 
@@ -123,19 +144,19 @@ header nav ul li{
     width: 100%;
     max-width: 1100px;
     display: flex;
-    flex-direction: row; /* texto à esquerda, imagem à direita */
+    flex-direction: row; 
     align-items: center;
     justify-content: space-between;
-    gap: rem;
-    text-align: leFt;
+    gap: 1rem;
+    text-align: left;
 }
 
 .inicio .flex {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* textos alinhados à esquerda */
+    align-items: flex-start; 
     gap: 1rem;
-    flex: 1; /* ocupa espaço disponível */
+    flex: 1; 
     order: 1;
 }
 
@@ -143,8 +164,8 @@ header nav ul li{
     width: 100%;
     max-width: 360px;
     display: flex;
-    justify-content: flex-end; /* imagem à direita */
-    flex: 0 0 360px; /* reserva espaço para a imagem */
+    justify-content: flex-end; 
+    flex: 0 0 360px; 
     order: 2;
     
 }
@@ -184,13 +205,13 @@ section.habilidades .flex{
 }
 
 .habilidades .habilidades-box{
-   color: #ffffff;
-   padding: 40px;
-   background-color: #0101663d;
-   
-   margin-top: 45px;
-   border-radius: 15px;
-   transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #ffffff;
+    padding: 40px;
+    background-color: #0101663d;
+    
+    margin-top: 45px;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .habilidades .habilidades-box:hover{
@@ -210,7 +231,7 @@ section.habilidades .flex{
 }
 /* Estilização da seção Sobre Mim */
 section.Sobre{
-    padding: 40px 4%;~
+    padding: 40px 4%;
 
     
 }
@@ -277,12 +298,12 @@ section.Projetos .flex{
 
 
 .img-port{
-   
+    
     width: 360px;
     height: 460px;
     background-size: cover;
     background-position: 100% 0%;
-   
+    
     position: relative;
     cursor: pointer;
     border-radius: 40px;
@@ -291,9 +312,9 @@ section.Projetos .flex{
 }
 
 .img-port:hover {
-     background-position: 100% 100%;
-      transition: 8s;
-     
+    background-position: 100% 100%;
+    transition: 8s;
+    
 }
 
 .overlay {
@@ -314,13 +335,13 @@ section.Projetos .flex{
 }
 .img-port:hover .overlay {
     opacity: 1;
-     transition: 3s;
-     color: #fff;
+    transition: 3s;
+    color: #fff;
 }
 
 section.formulario{
     padding: 50px 4%;
-   
+    
     
 }
 
@@ -343,7 +364,7 @@ form input, form textarea{
 }
 
 form textarea{
-    resize: nonE;
+    resize: none;
     min-height: 150px;
 }
 
@@ -365,7 +386,7 @@ form .btn-contato input{
 footer{
     padding: 40px 4%;
     margin-top: 60px;
-     box-shadow: 0px 0px 20px #2a2af03d;
+    box-shadow: 0px 0px 20px #2a2af03d;
 }
 
 footer.flex{
@@ -394,31 +415,82 @@ footer .linefooter p a{
     text-decoration: none;
     color: #ffffff;
     font-weight: 600;
-
 }
 
-@media  screen and (max-width: 720px){
+
+/* MEDIA QUERY PARA RESPONSIVIDADE (MOBILE) */
+
+@media screen and (max-width: 720px){
+    
 
     .navegacao{
         padding: 0 20px;
     }
 
+    /* ATIVA O ÍCONE HAMBURGER E ESCONDE O MENU GRANDE */
+    .btn-abrir-menu {
+        display: block; 
+    }
+    
+    header .menucomp {
+        display: none; /* Esconde a navegação principal no mobile */
+    }
+
+    /* ESTILO PARA O MENU LATERAL (QUANDO ATIVADO PELO JS) */
+    .menucomp.abrir-menu {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 70%; 
+        height: 100vh;
+        background-color: #110294; 
+        padding: 40px;
+        z-index: 999; 
+        overflow-y: auto;
+        animation: abrirMenu .5s forwards;
+    }
+
+    .menucomp.abrir-menu nav ul {
+        flex-direction: column;
+        gap: 30px;
+        padding-top: 50px;
+    }
+    .menucomp.abrir-menu nav ul li a {
+        color: #fff;
+        font-size: 20px;
+        font-weight: 500;
+    }
+    .menucomp.abrir-menu .btn-contato {
+        margin-top: 30px;
+        width: 100%;
+    }
+    
+    @keyframes abrirMenu {
+        from {
+            right: -100%;
+        }
+        to {
+            right: 0;
+        }
+    }
+
+
+    /* ESTILOS DE COMPONENTES EXISTENTES */
 
     .interface, .inicio{
         flex-direction: column;
         text-align: center;
-        align-items: center; /* centraliza itens no eixo transversal */
-        justify-content: center; /* centraliza no eixo principal */
+        align-items: center; 
+        justify-content: center; 
     }
 
-    /* força os blocos internos a ficarem centralizados */
     .inicio .flex{
         align-items: center;
         text-align: center;
     }
 
-    /* garante que o botão fique centralizado (se estiver dentro de um container flex ou form) */
-    .btn-contato,                   
+    
     form .btn-contato{
         margin: 0 auto;
         align-self: center;
